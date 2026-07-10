@@ -21,3 +21,18 @@ VALUES
 (4,'Pizza Hut',700,5);
 
 SELECT * FROM restaurants;
+-- CREATE
+INSERT INTO restaurants
+VALUES(5,'KFC',450,4);
+
+-- READ
+SELECT * FROM restaurants;
+
+-- UPDATE
+UPDATE restaurants
+SET price=550
+WHERE restaurant_id=5;
+
+-- DELETE
+DELETE FROM restaurants
+WHERE restaurant_id=5;
