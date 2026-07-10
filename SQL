@@ -5,3 +5,11 @@ SHOW DATABASES;
 USE restaurant_management;
 
 SHOW TABLES;
+CREATE TABLE restaurants(
+    restaurant_id INT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    price INT,
+    rating INT
+);
+
+DESC restaurants;
