@@ -45,3 +45,14 @@ CREATE TABLE customers(
     FOREIGN KEY(restaurant_id)
     REFERENCES restaurants(restaurant_id)
 );
+SELECT *
+FROM restaurants
+WHERE price>400;
+
+SELECT *
+FROM restaurants
+WHERE rating>=4;
+
+SELECT *
+FROM restaurants
+WHERE price<600 AND rating=5;
