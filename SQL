@@ -13,3 +13,11 @@ CREATE TABLE restaurants(
 );
 
 DESC restaurants;
+INSERT INTO restaurants
+VALUES
+(1,'Paradise',500,5),
+(2,'Mehfil',350,4),
+(3,'Dominos',600,4),
+(4,'Pizza Hut',700,5);
+
+SELECT * FROM restaurants;
