@@ -56,3 +56,64 @@ WHERE rating>=4;
 SELECT *
 FROM restaurants
 WHERE price<600 AND rating=5;
+SELECT *
+FROM restaurants
+WHERE name LIKE 'P%';
+
+SELECT *
+FROM restaurants
+WHERE price BETWEEN 300 AND 600;
+
+SELECT *
+FROM restaurants
+ORDER BY price DESC;
+
+SELECT *
+FROM restaurants
+LIMIT 3;
+
+SELECT *
+FROM restaurants
+LIMIT 2 OFFSET 1;
+
+SELECT COUNT(*) FROM restaurants;
+
+SELECT MAX(price) FROM restaurants;
+
+SELECT MIN(price) FROM restaurants;
+
+SELECT AVG(price) FROM restaurants;
+
+SELECT SUM(price) FROM restaurants;
+
+SELECT rating,COUNT(*)
+FROM restaurants
+GROUP BY rating;
+
+SELECT rating,COUNT(*)
+FROM restaurants
+GROUP BY rating
+HAVING COUNT(*)>=2;
+
+SELECT
+c.name,
+r.name
+FROM customers c
+INNER JOIN restaurants r
+ON c.restaurant_id=r.restaurant_id;
+
+-- Primary Key
+restaurant_id INT PRIMARY KEY
+
+-- Foreign Key
+FOREIGN KEY(restaurant_id)
+REFERENCES restaurants(restaurant_id)
+
+-- Unique Key
+phone VARCHAR(15) UNIQUE
+
+-- Candidate Key
+-- Example: Email or Aadhaar can uniquely identify a record.
+
+-- Super Key
+-- Example: (restaurant_id), (restaurant_id, name)
