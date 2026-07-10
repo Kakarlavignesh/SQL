@@ -1,0 +1,7 @@
+CREATE DATABASE restaurant_management;
+
+SHOW DATABASES;
+
+USE restaurant_management;
+
+SHOW TABLES;
