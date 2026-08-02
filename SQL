@@ -117,3 +117,37 @@ phone VARCHAR(15) UNIQUE
 
 -- Super Key
 -- Example: (restaurant_id), (restaurant_id, name)
+-- ===========================
+-- ROW_NUMBER()
+-- ===========================
+-- Gives every row a unique number.
+-- Duplicate values get different numbers.
+
+SELECT
+    score,
+    ROW_NUMBER() OVER (ORDER BY score DESC) AS row_num
+FROM Scores;
+
+
+-- ===========================
+-- RANK()
+-- ===========================
+-- Same values get the same rank.
+-- Skips the next rank after duplicates.
+
+SELECT
+    score,
+    RANK() OVER (ORDER BY score DESC) AS rank
+FROM Scores;
+
+
+-- ===========================
+-- DENSE_RANK()
+-- ===========================
+-- Same values get the same rank.
+-- Does NOT skip ranks.
+
+SELECT
+    score,
+    DENSE_RANK() OVER (ORDER BY score DESC) AS dense_rank
+FROM Scores;
